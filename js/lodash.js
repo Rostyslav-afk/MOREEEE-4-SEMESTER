@@ -24,3 +24,34 @@
 //     }
 // )
 // );
+
+
+// Потрібно затримати виконання функції при введенні тексту в поле input, щоб не перевантажувати сервер. Використовуйте метод throttle з бібліотеки lodash. Встановіть час затримки в мілісекундах, наприклад 500мс, і передайте функцію, яку потрібно виконати при введенні тексту.
+
+// const inputEl = document.querySelector("input");
+// let text = "";  
+
+// inputEl.addEventListener("input", _.throttle(() => {
+//     text = inputEl.value;
+//     console.log(text);
+// }, 300));
+
+
+// Потрібно забезпечити виклик функції при завершенні введення тексту в поле input. Використовуйте метод debounce з бібліотеки lodash. Встановіть час затримки в мілісекундах, наприклад 500мс, і передайте функцію, яку потрібно викликати при завершенні введення тексту.
+// const inputEl = document.querySelector("input");
+
+// inputEl.addEventListener("blur", _.debounce(event => {
+//     console.log(event.target.value);
+// }, 300));
+
+
+// Потрібно забезпечити виклик функції при введенні тексту в поле input з певною затримкою. Використовуйте метод throttle з бібліотеки lodash. Встановіть час затримки в мілісекундах, наприклад 500мс, і передайте функцію, яку потрібно викликати при введенні тексту.
+const inputEl = document.querySelector("input");
+
+inputEl.addEventListener("input", _.throttle(writingText, 500));
+
+function writingText(event){
+    console.log(event.target.value);
+    console.log("Відбулась подія");
+    
+};
