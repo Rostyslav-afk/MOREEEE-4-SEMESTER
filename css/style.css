@@ -52,10 +52,38 @@
     outline: 2px solid red;
 } */
 
-.item{
+/* .item{
     width: 1000px;
 }
 
 .image{
     max-width: 1000px;
+} */
+
+h1,h2,p{
+    margin: 0;
+}
+
+img{
+    display: block;
+
+}
+
+
+
+
+
+.header{
+    height: calc(100vh + 100px);
+    background-color: tomato;
+}
+
+section{
+    height: 100vh;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    outline: 1px solid red;
 }
